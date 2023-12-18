@@ -1,6 +1,19 @@
 <script>
-  import Calendar from "./Calendar.svelte";
-  import { getData } from "./data.js";
+	import MainContainer from './MainContainer.svelte';
+import Sidebar from './Sidebar.svelte';
+  import "@dhx/trial-suite/codebase/suite.min.css"
+
 </script>
 
-<Calendar events={getData()} date={new Date(2021, 5, 10)} />
+<main>
+  <Sidebar />
+  <MainContainer/>
+</main>
+
+<style>
+ main {
+    height: 100%;
+    width: 100%;
+    display: flex;
+  }
+</style>
